@@ -1,0 +1,32 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+._form_cadastro{
+    width: 500px;
+}
+    ._form_cadastro legend{
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    ._form_cadastro table{
+        width: 100%;
+    }
+        ._form_cadastro table *{
+            width: 50%;
+            margin: 3px;
+            padding: 2px;
+        }
+        ._form_cadastro table tr:nth-of-type(odd){
+            color: white;
+            background-color: rgb(141, 141, 141);
+        }
+        ._form_cadastro table tr:nth-of-type(even){
+            background-color: rgb(231, 231, 231);
+        }
+    
+    ._form_cadastro input[type=submit]{
+        margin: 3px;
+        padding: 2px;
+    }

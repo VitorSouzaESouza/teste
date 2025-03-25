@@ -1,0 +1,11 @@
+- Descreva o processo que você seguiria para criar a lista de horários de trabalho.
+
+Resposta: A lista de trabalho é um objeto, e cada um desses objetos será atribuído para um funcionário. Dentro dessa lista possui um array que armazena qualquer dia do ano para atribuir tarefas, e cada dia pode atribuir uma hora específica em hora:minuto junto com sua tarefa. Dentro o objeto da lista de trabalho possui um gerador de lista que irá exibir ao funcionário apenas os próximos 30 dias de trabalho que estão cadastrados, se não algum dia não tiver cadastrado dentro dos 30 dias, então será criado automaticamente um dia vazio sem horas e tarefas para exibir.
+
+
+- Explique como você garantiria que apenas as horas úteis de trabalho fossem incluídas na lista.
+
+Resposta: É usado uma função date() e uma função strtotime(), elas retornarão dia e hora de uma determinada data e hora especificada. Para definir se está no intervalo de 09:00 as 12:00 e 13:00 as 18:00, é usado o tempo em segundos retornado pela funcão strtotime() de 9:00, de 11:59 e também de 13:00 e 17:59. Quando é colocado uma hora que está dentro desses dois intervalos, o tempo em segundos retornado por strtime() também estará, e usando lógica "and" é possível descobrir que a tal hora informada é parte do intervalo (útil), se alguma hora estiver fora desse intervalo, então o tempo em segundos também estará, pois a função compara o tempo passado com referência na mesma data, e então a hora não será cadastrada.
+
+
+- Forneça um exemplo de código em PHP para criar a lista de horários de trabalho e verificar se uma determinada hora é uma hora útil.
