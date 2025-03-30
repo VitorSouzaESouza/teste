@@ -22,32 +22,33 @@
             <input type="submit" value="cadastrar"/>
         </fieldset>
     </form>
-    <form id="form_cadastro_funcionario" class="_form_cadastro" method="post" action="cadastrar_departamento.php">
+    <form id="form_cadastro_departamento" class="_form_cadastro" method="post" action="cadastrar_departamento.php">
         <fieldset>
             <legend>Cadastro de departamento</legend>
             <table>
-                <tr> <td><label>Nome</label></td> <td><input type="text" name="departamento"></td> </tr>
+                <tr> <td><label>Departamento</label></td> <td><input type="text" name="departamento"></td> </tr>
             </table>
             <input type="submit" name="cadastrar_departamento" value="cadastrar"/>
         </fieldset>
     </form>
-
+    <form id="form_cadastro_lista_de_trabalho" class="_form_cadastro" method="post" action="cadastrar_lista_de_trabalho.php">
+        <fieldset>
+            <legend>Cadastro de lista_de_trabalho</legend>
+            <table>
+                <tr> <td><label>Lista de trabalho</label></td> <td><input type="text" name="lista_de_trabalho"></td> </tr>
+                <tr> <td><label>Funcionário</label></td> <td><select style="width:95%" name="funcionário"></select></td> </tr>
+                <tr> <td><label>Dia</label></td> <td><input type="date" name="dia"></td> </tr>
+                <tr> <td><label>Hora</label></td> <td><input style="width:15%" type="number" name="hora"><span style="font-size:24px">:</span><input style="width:15%" type="number" name="minuto"></td> </tr>
+                <tr> <td><label>Tarefa</label></td> <td><input type="text" name="tarefa"></td> </tr>
+            </table>
+            <input type="submit" name="cadastrar_lista_de_trabalho" value="cadastrar"/>
+        </fieldset>
+    </form>
+    <div id="div_departamentos">
+        
+    </div>
     <?php
         require("objects.php");
-        // $dept1 = new Departamento("dept1");
-        // $dept2 = new Departamento("dept2");
-        // $vitor = new Funcionario("Vitor", "email@gmail.com", "00000000000", "29", $dept1);
-        // $joao = new Funcionario("João", "email@gmail.com", "00000000000", "30", $dept2);
-        // $andre = new Funcionario("Andre", "email@gmail.com", "00000000000", "28", $dept1);
-        // $pedro = new Funcionario("Pedro", "email@gmail.com", "00000000000", "29", $dept2);
-        // //print_r($vitor->lista_de_trabalho);
-        // $lista1 = new ListaDeTrabalho($vitor);
-        // //print_r($lista1->funcionario);
-        // $lista1->atribuir_dia_hora_tarefa("2025-04-01","10:00","Limpar o escritório.");
-        // $lista1->atribuir_dia_hora_tarefa("2025-04-01","12:00","Elaborar planilhas.");
-        // $lista1->remover_dia_hora_tarefa("2025-04-01");
-        // $dept1->remove_funcionario($vitor);
-        // print_r($vitor->lista_de_trabalho->gerar_lista()["2025-04-01"]);
     ?>
 
 </body>
